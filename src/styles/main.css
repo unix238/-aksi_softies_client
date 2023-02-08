@@ -37,3 +37,7 @@
     font-size: 30px;
     font-weight: 400;
 }
+
+.items__title {
+    padding-bottom: 30px;
+}

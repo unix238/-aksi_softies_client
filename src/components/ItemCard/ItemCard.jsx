@@ -4,18 +4,24 @@ import image from '../../assets/images/item.jpeg';
 import { Cart } from '../Icons/Cart';
 
 export const ItemCard = () => {
-  return (
-    <div className={cl.item}>
-      <div className={cl.image}>
-        <img src={image} alt='' />
-      </div>
-      <div className={cl.title}>Игрушка</div>
-      <div className={cl.line}>
-        <div className={cl.price}>15 000тг</div>
-        <div className={cl.icon}>
-          <Cart />
+    const price = 15000;
+    return (
+        <div className={cl.item}>
+            <div className={cl.image}>
+                <img src={image} alt='' />
+            </div>
+            <div className={cl.title}>Игрушка</div>
+            <div className={cl.line}>
+                <div className={cl.price}>
+                    {price.toLocaleString(undefined, {
+                        maximumFractionDigits: 2,
+                    })}{' '}
+                    ₸
+                </div>
+                <div className={cl.icon}>
+                    <Cart />
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
