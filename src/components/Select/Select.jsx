@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import cl from './Select.module.css';
 
 export const Select = ({ option }) => {
-    const [currentOption, setCurrentOption] = useState(option.options[0]);
+    const [currentOption, setCurrentOption] = useState(option.options[0].title);
 
     const handleChange = (e) => {
         setCurrentOption(e.target.value);
@@ -16,8 +16,12 @@ export const Select = ({ option }) => {
             onChange={handleChange}
         >
             {option.options.map((opt) => (
-                <option value={opt} key={`${opt}filters`}>
-                    {opt}
+                <option
+                    className={cl.option}
+                    value={opt.value}
+                    key={`${opt.value}filters`}
+                >
+                    {opt.text}
                 </option>
             ))}
         </select>

@@ -11,11 +11,12 @@ export const Filter = () => {
     const setFilter = (filter) => {
         console.log(filter);
     };
+
     const allOptions = SortsAndFilters[currentLanguage];
     const options = allOptions.map((option) => {
         return { ...option, onClick: setFilter };
     });
-    console.log(currentLanguage);
+
     return (
         <div className={cl.container}>
             {options.map((option) => (
