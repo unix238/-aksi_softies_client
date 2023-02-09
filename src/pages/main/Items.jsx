@@ -23,6 +23,8 @@ export const Items = () => {
                     <ItemCard />
                     <ItemCard />
                     <ItemCard />
+                    <ItemCard />
+                    <ItemCard />
                 </div>
             </div>
         </div>
