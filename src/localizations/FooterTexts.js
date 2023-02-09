@@ -12,7 +12,8 @@ export const FooterTexts = [
         button: 'Заказать звонок',
     },
     {
-        titles: ['', '', ''],
+        titles: ['Наш адресс', 'Контакты', 'Следите за нами', 'Помощь'],
+
         address: ['ТРЦ FORUM 2 этаж', '10:00 - 22:00'],
         contact: [
             '+7 (747) 777 77 77', // phone number
@@ -24,7 +25,8 @@ export const FooterTexts = [
         button: 'Заказть звонок',
     },
     {
-        titles: ['', '', ''],
+        titles: ['Наш адресс', 'Контакты', 'Следите за нами', 'Помощь'],
+
         address: ['ТРЦ FORUM 2 этаж', '10:00 - 22:00'],
         contact: [
             '+7 (747) 777 77 77', // phone number

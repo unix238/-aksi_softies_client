@@ -32,10 +32,8 @@ export const SortsAndFilters = [
         {
             title: 'Пряжа',
             options: [
-                { text: 'Шерсть', value: 'wool' },
-                { text: 'Хлопок', value: 'cotton' },
+                { text: 'Полиэстер', value: 'cotton' },
                 { text: 'Акрил', value: 'acrylic' },
-                { text: 'Синтетика', value: 'synthetic' },
             ],
         },
         {
@@ -80,10 +78,8 @@ export const SortsAndFilters = [
         {
             title: 'Пряжа',
             options: [
-                { text: 'Шерсть', value: 'wool' },
-                { text: 'Хлопок', value: 'cotton' },
+                { text: 'Полиэстер', value: 'cotton' },
                 { text: 'Акрил', value: 'acrylic' },
-                { text: 'Синтетика', value: 'synthetic' },
             ],
         },
         {
@@ -128,10 +124,8 @@ export const SortsAndFilters = [
         {
             title: 'Пряжа',
             options: [
-                { text: 'Шерсть', value: 'wool' },
-                { text: 'Хлопок', value: 'cotton' },
+                { text: 'Полиэстер', value: 'cotton' },
                 { text: 'Акрил', value: 'acrylic' },
-                { text: 'Синтетика', value: 'synthetic' },
             ],
         },
         {

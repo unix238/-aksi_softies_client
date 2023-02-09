@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import Cookies from 'js-cookie';
-import axios from 'axios';
 
-import { setUser } from '../actions/authActions';
-import { Login } from '../pages/auth/Login';
 import { PageWrapper } from './PageWrapper';
-import config from '../config/config';
 
 import { Items } from '../pages/main/Items';
+import { Basket } from '../pages/main/Basket';
 import { HowToOrder } from '../pages/main/HowToOrder';
 import { NotFound } from '../pages/error/NotFound';
 
@@ -49,7 +44,7 @@ const Routes = createBrowserRouter([
     },
     {
         path: '/cart',
-        element: <PageWrapper Page={placeholder} />,
+        element: <PageWrapper Page={Basket} />,
     },
     {
         path: '*',
@@ -58,65 +53,6 @@ const Routes = createBrowserRouter([
     },
 ]);
 
-const AuthRoutes = createBrowserRouter([
-    {
-        path: '/login',
-        element: <PageWrapper Page={Login} />,
-    },
-    {
-        path: '/logout',
-        element: <>Logout</>,
-    },
-    {
-        path: '*',
-        element: <Navigate to='/login' />,
-    },
-]);
-
-const LoaderRoute = createBrowserRouter([
-    {
-        path: '*',
-        element: <>Checking Authorization</>,
-        // element: <AuthenticatedRoutes />,
-    },
-]);
-
 export const AppRouter = () => {
-    const token = Cookies.get('token');
-    const [isLoading, setIsLoading] = useState(true);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const dispatch = useDispatch();
-
-    const checkToken = async () => {
-        try {
-            const response = await axios.post(
-                `${config.url}/auth/check`,
-                {},
-                {
-                    headers: {
-                        Authorization: 'Bearer ' + token,
-                    },
-                }
-            );
-
-            console.log(response);
-            dispatch(setUser(response.data));
-            return true;
-        } catch (error) {
-            return !false;
-        }
-    };
-
-    useEffect(() => {
-        checkToken().then((res) => {
-            setIsAuthenticated(res);
-            setIsLoading(false);
-        });
-    }, []);
-
-    if (isLoading) {
-        return <RouterProvider router={LoaderRoute} />;
-    }
-
-    return <RouterProvider router={isAuthenticated ? Routes : AuthRoutes} />;
+    return <RouterProvider router={Routes} />;
 };

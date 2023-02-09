@@ -41,3 +41,9 @@
 .items__title {
     padding-bottom: 30px;
 }
+
+.basket__items {
+    margin-top: 20px;
+    border-top: 2px solid #B8B8B8;
+    min-height: 70vh;
+}
