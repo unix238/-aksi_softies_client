@@ -20,7 +20,7 @@ export const Filter = () => {
     return (
         <div className={cl.container}>
             {options.map((option) => (
-                <Select option={option} />
+                <Select key={`${option.title} in filter.jsx`} option={option} />
             ))}
         </div>
     );

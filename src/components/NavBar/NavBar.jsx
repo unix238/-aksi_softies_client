@@ -12,7 +12,7 @@ export const NavBar = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [currentLink, setCurrentLink] = useState('/');
-
+    const basketItems = useSelector((state) => state.basket.basketItems).length;
     const changeLanguage = (language) => {
         dispatch(setCurrentLanguage(language));
     };
@@ -92,6 +92,9 @@ export const NavBar = () => {
                         }}
                     >
                         <Cart />
+                        {basketItems > 0 ? (
+                            <span className={cl.badge}>{basketItems}</span>
+                        ) : null}
                     </div>
                 </div>
             </div>

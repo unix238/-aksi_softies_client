@@ -75,3 +75,16 @@
 .links {
     cursor: pointer;
 }
+
+.capybara {
+    display: none;
+    /* background: #000; */
+}
+
+.handmade:hover~.capybara {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: red;
+}

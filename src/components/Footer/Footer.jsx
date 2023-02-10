@@ -5,6 +5,7 @@ import callIcon from '../../assets/icons/call.svg';
 import instIcon from '../../assets/icons/inst.svg';
 import telegramIcon from '../../assets/icons/tg.svg';
 import whatsAppIcon from '../../assets/icons/wa.svg';
+import capybara from '../../assets/images/capybara.png';
 
 import { FooterTexts } from '../../localizations/FooterTexts';
 import { useSelector } from 'react-redux';
@@ -112,6 +113,9 @@ export const Footer = () => {
                         <div className={cl.handmade}>Handmade</div>
                         <div className={cl.btn}>
                             {FooterTexts[currentLanguage].button}
+                        </div>
+                        <div className={cl.capybara}>
+                            <img src={capybara} alt='' />
                         </div>
                     </div>
                 </div>

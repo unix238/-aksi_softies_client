@@ -8,6 +8,9 @@ import { Items } from '../pages/main/Items';
 import { Basket } from '../pages/main/Basket';
 import { HowToOrder } from '../pages/main/HowToOrder';
 import { NotFound } from '../pages/error/NotFound';
+import { Detail } from '../pages/main/Detail';
+import { Index } from '../pages/main/Index';
+import { Support } from '../pages/main/Support';
 
 const placeholder = () => {
     return <>placeholder</>;
@@ -16,7 +19,7 @@ const placeholder = () => {
 const Routes = createBrowserRouter([
     {
         path: '/',
-        element: <PageWrapper Page={placeholder} />,
+        element: <PageWrapper Page={Index} />,
     },
     {
         path: '/catalog',
@@ -40,11 +43,15 @@ const Routes = createBrowserRouter([
     },
     {
         path: '/support',
-        element: <PageWrapper Page={placeholder} />,
+        element: <PageWrapper Page={Support} />,
     },
     {
         path: '/cart',
         element: <PageWrapper Page={Basket} />,
+    },
+    {
+        path: '/detail/:id',
+        element: <PageWrapper Page={Detail} />,
     },
     {
         path: '*',

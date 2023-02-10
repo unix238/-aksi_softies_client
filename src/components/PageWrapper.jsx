@@ -9,7 +9,6 @@ import { Footer } from './Footer/Footer';
 export const PageWrapper = ({ Page }) => {
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(fetchItems());
         dispatch({ type: LOAD_CURRENT_LANGUAGE });
     }, []);
     return (
