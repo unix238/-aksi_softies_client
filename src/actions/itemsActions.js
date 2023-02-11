@@ -1,69 +1,73 @@
 import axios from 'axios';
 import config from '../config/config';
-import Cookies from 'js-cookie';
 
-export const FETCH_ITEMS = 'FETCH_RESTAURANTS';
-export const SET_ITEMS = 'SET_RESTAURANTS';
-export const ADD_ITEM = 'ADD_RESTAURANT';
-export const UPDATE_ITEM = 'UPDATE_RESTAURANT';
-export const FETCH_FOOD_ITEMS = 'FETCH_FOOD_ITEMS';
-export const SET_FOOD_ITEMS = 'SET_FOOD_ITEMS';
-export const FETCH_BRANDS = 'FETCH_BRANDS';
-export const SET_BRANDS = 'SET_BRANDS';
-export const FETCH_CATEGORIES = 'FETCH_CATEGORIES';
-export const SET_CATEGORIES = 'SET_CATEGORIES';
-export const FETCH_TAGS = 'FETCH_TAGS';
-export const SET_TAGS = 'SET_TAGS';
-export const DELETE_ITEM = 'DELETE_ITEM';
-export const FETCH_ORDERS = 'FETCH_ORDERS';
-export const SET_ORDERS = 'SET_ORDERS';
-
-export const fetchItems = (state) => {
-  return (dispatch) => {
-    // Make API call to fetch restaurants
-    return axios
-      .get(`${config.url}/items/all`, {
-        headers: {
-          Authorization: `Bearer ${Cookies.get('token')}`,
-        },
-      })
-      .then((response) => {
-        dispatch(setItems(response.data, state));
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-};
+export const FETCH_ITEMS = 'FETCH_ITEMS';
+export const SET_ITEMS = 'SET_ITEMS';
 
 export const setItems = (items, state) => {
-  state(items);
-  return {
-    type: SET_ITEMS,
-    items,
-  };
+    state(items);
+    return {
+        type: SET_ITEMS,
+        items,
+    };
 };
 
-export const addItem = (item) => {
-  return (dispatch) => {
+export const fetchItems = (state) => {
+    return (dispatch) => {
+        return axios
+            .get(`${config.url}item/all`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET',
+                },
+            })
+            .then((response) => {
+                dispatch(setItems(response.data, state));
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+};
+
+export const getItemById = (id, setCurrentItem, setIsLoading) => {
     return axios
-      .post(
-        `${config.url}/items/addItem`,
-        { item },
-        {
-          headers: {
-            Authorization: `Bearer ${Cookies.get('token')}`,
-          },
-        }
-      )
-      .then((response) => {
-        dispatch({
-          type: ADD_ITEM,
-          item: response.data,
+        .get(`${config.url}item/get/${id}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET',
+            },
+        })
+        .then((response) => {
+            setCurrentItem(response.data);
+            setIsLoading(false);
+        })
+        .catch((error) => {
+            console.error(error);
+            setIsLoading(true);
         });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+};
+
+export const fetchFilteredItems = (filter) => {
+    return (dispatch) => {
+        return axios
+            .get(`${config.url}item/filter`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET',
+                },
+                params: {
+                    filter,
+                },
+            })
+            .then((response) => {
+                dispatch(setItems(response.data, state));
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
 };

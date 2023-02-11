@@ -1,32 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import cl from './BasketItemCard.module.css';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchItems } from '../../actions/itemsActions';
+import { fetchItems, getItemById } from '../../actions/itemsActions';
 
-export const BasketItemCard = ({ card }) => {
-    return (
+export const BasketItemCard = ({ id }) => {
+    const currentLanguage = useSelector(
+        (state) => state.global.currentLanguage
+    );
+    const [currentItem, setCurrentItem] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        getItemById(id.item._id, setCurrentItem, setIsLoading);
+    }, []);
+
+    return isLoading ? (
+        <></>
+    ) : (
         <>
             <div className={cl.item}>
                 <div className={cl.left}>
                     <div className={cl.image}>
-                        <img src='https://m.media-amazon.com/images/I/51cGCBxqrRL._SL1000_.jpg' />
+                        <img src={currentItem.images[0]} />
                     </div>
                     <div className={cl.texts}>
                         <div className={cl.title}>
-                            Игрушка <span className={cl.bold}>Медведь</span>
+                            Игрушка{' '}
+                            <span className={cl.bold}>
+                                {currentItem.title[currentLanguage]}
+                            </span>
                         </div>
-                        <div className={cl.size}>Размер: 48</div>
+                        <div className={cl.size}>Размер: {id.size}</div>
                     </div>
                 </div>
                 <div className={cl.mid}>
                     <div className={cl.quantity}>
-                        <span className={cl.bold}>1шт.</span>
+                        <span className={cl.bold}>{id.quantity}шт.</span>
                     </div>
                 </div>
                 <div className={cl.price}>
                     <div className={cl.price__text}>
-                        <span className={cl.bold}>19.900</span>
+                        <span className={cl.bold}>
+                            {currentItem.price[0].toLocaleString(undefined, {
+                                maximumFractionDigits: 2,
+                            })}{' '}
+                            ₸
+                        </span>
                     </div>
                     <div className={cl.button}>Удалить</div>
                 </div>

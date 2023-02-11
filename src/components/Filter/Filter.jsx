@@ -8,8 +8,18 @@ export const Filter = () => {
     const currentLanguage = useSelector(
         (state) => state.global.currentLanguage
     );
+
+    const allFilters = {
+        sort: 'default',
+        size: 'all',
+        category: 'all',
+        price: 'all',
+        material: 'all',
+    };
+
     const setFilter = (filter) => {
-        console.log(filter);
+        allFilters[Object.keys(filter)[0]] = filter[Object.keys(filter)[0]];
+        console.log(allFilters);
     };
 
     const allOptions = SortsAndFilters[currentLanguage];
