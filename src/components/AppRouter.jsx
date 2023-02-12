@@ -10,7 +10,8 @@ import { HowToOrder } from '../pages/main/HowToOrder';
 import { NotFound } from '../pages/error/NotFound';
 import { Detail } from '../pages/main/Detail';
 import { Index } from '../pages/main/Index';
-import { Support } from '../pages/main/Support';
+import { Contact } from '../pages/main/Contact';
+import { About } from '../pages/main/About';
 
 const placeholder = () => {
     return <>placeholder</>;
@@ -31,19 +32,11 @@ const Routes = createBrowserRouter([
     },
     {
         path: '/about',
-        element: <PageWrapper Page={placeholder} />,
-    },
-    {
-        path: '/blog',
-        element: <PageWrapper Page={placeholder} />,
+        element: <PageWrapper Page={About} />,
     },
     {
         path: '/contacts',
-        element: <PageWrapper Page={placeholder} />,
-    },
-    {
-        path: '/support',
-        element: <PageWrapper Page={Support} />,
+        element: <PageWrapper Page={Contact} />,
     },
     {
         path: '/cart',

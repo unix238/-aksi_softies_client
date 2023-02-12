@@ -7,7 +7,9 @@ export const Basket = () => {
     // const basketItems = JSON.parse(items);
 
     // console.log(items);
-
+    useEffect(() => {
+        document.title = 'Корзина';
+    }, []);
     return (
         <div className='basket'>
             <div className='wrapper'>

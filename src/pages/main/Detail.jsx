@@ -13,6 +13,9 @@ export const Detail = () => {
     useEffect(() => {
         getItemById(location, setCurrentItem, setIsLoading);
     }, []);
+    useEffect(() => {
+        document.title = currentItem.title[currentLanguage];
+    }, [currentItem]);
 
     return (
         <div>

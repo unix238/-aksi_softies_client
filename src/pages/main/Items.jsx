@@ -6,6 +6,9 @@ import { addItemToBasket } from '../../actions/basketActions';
 import { useDispatch } from 'react-redux';
 
 export const Items = ({ items }) => {
+    useEffect(() => {
+        document.title = 'Каталог';
+    }, []);
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {

@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import { ItemCard } from '../../components/ItemCard/ItemCard';
 
 export const Index = () => {
+    useEffect(() => {
+        document.title = 'Главная';
+    }, []);
     const items = useSelector((state) => state.items.items);
     return (
         <>

@@ -5,22 +5,13 @@ export const NavBarTexts = [
             'Каталог',
             'Қалай тапсырыс беру',
             'Автор туралы',
-            'Блог',
+
             'Байланыс',
-            'Қолдау',
         ],
         searchText: 'Іздеу',
     },
     {
-        links: [
-            'Главная',
-            'Каталог',
-            'Как заказть',
-            'Об авторе',
-            'Блог',
-            'Контакты',
-            'Поддержка',
-        ],
+        links: ['Главная', 'Каталог', 'Как заказть', 'Об авторе', 'Контакты'],
         searchText: 'Поиск',
     },
     {
@@ -29,9 +20,8 @@ export const NavBarTexts = [
             'Catalog',
             'How to order',
             'About the author',
-            'Blog',
+
             'Contacts',
-            'Support',
         ],
         searchText: 'Search',
     },

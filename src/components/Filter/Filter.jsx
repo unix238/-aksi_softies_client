@@ -3,23 +3,26 @@ import { Select } from '../Select/Select';
 import { SortsAndFilters } from '../../localizations/SortsAndFilters';
 import cl from './Filter.module.css';
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchFilteredItems } from '../../actions/itemsActions';
 
 export const Filter = () => {
     const currentLanguage = useSelector(
         (state) => state.global.currentLanguage
     );
 
+    const dispatch = useDispatch();
+
     const allFilters = {
-        sort: 'default',
-        size: 'all',
-        category: 'all',
-        price: 'all',
-        material: 'all',
+        sort: null,
+        size: null,
+        category: null,
+        price: null,
+        material: null,
     };
 
     const setFilter = (filter) => {
         allFilters[Object.keys(filter)[0]] = filter[Object.keys(filter)[0]];
-        console.log(allFilters);
+        dispatch(fetchFilteredItems(allFilters));
     };
 
     const allOptions = SortsAndFilters[currentLanguage];

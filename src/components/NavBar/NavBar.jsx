@@ -135,14 +135,6 @@ export const NavBar = () => {
                         {NavBarTexts[currentLanguage].links[3]}
                     </Link>
                     <Link
-                        to={'/blog'}
-                        className={
-                            currentLink === '/blog' ? cl.activeLink : cl.link
-                        }
-                    >
-                        {NavBarTexts[currentLanguage].links[4]}
-                    </Link>
-                    <Link
                         to={'/contacts'}
                         className={
                             currentLink === '/contacts'
@@ -150,15 +142,7 @@ export const NavBar = () => {
                                 : cl.link
                         }
                     >
-                        {NavBarTexts[currentLanguage].links[5]}
-                    </Link>
-                    <Link
-                        to={'/support'}
-                        className={
-                            currentLink === '/support' ? cl.activeLink : cl.link
-                        }
-                    >
-                        {NavBarTexts[currentLanguage].links[6]}
+                        {NavBarTexts[currentLanguage].links[4]}
                     </Link>
                 </div>
             </div>

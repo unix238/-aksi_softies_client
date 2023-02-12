@@ -3,11 +3,19 @@ import config from '../config/config';
 
 export const FETCH_ITEMS = 'FETCH_ITEMS';
 export const SET_ITEMS = 'SET_ITEMS';
+export const FETCH_FILTERED_ITEMS = 'FETCH_FILTERED_ITEMS';
 
 export const setItems = (items, state) => {
     state(items);
     return {
         type: SET_ITEMS,
+        items,
+    };
+};
+
+export const setFilteredItems = (items) => {
+    return {
+        type: FETCH_FILTERED_ITEMS,
         items,
     };
 };
@@ -50,7 +58,7 @@ export const getItemById = (id, setCurrentItem, setIsLoading) => {
         });
 };
 
-export const fetchFilteredItems = (filter) => {
+export const fetchFilteredItems = (filters) => {
     return (dispatch) => {
         return axios
             .get(`${config.url}item/filter`, {
@@ -60,11 +68,11 @@ export const fetchFilteredItems = (filter) => {
                     'Access-Control-Allow-Methods': 'GET',
                 },
                 params: {
-                    filter,
+                    ...filters,
                 },
             })
             .then((response) => {
-                dispatch(setItems(response.data, state));
+                dispatch(setFilteredItems(response.data));
             })
             .catch((error) => {
                 console.error(error);
