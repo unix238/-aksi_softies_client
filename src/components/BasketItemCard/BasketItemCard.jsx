@@ -3,6 +3,7 @@ import cl from './BasketItemCard.module.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchItems, getItemById } from '../../actions/itemsActions';
+import { Link } from 'react-router-dom';
 import { removeItemFromBasket } from '../../actions/basketActions';
 
 export const BasketItemCard = ({ id }) => {
@@ -28,9 +29,11 @@ export const BasketItemCard = ({ id }) => {
         <>
             <div className={cl.item}>
                 <div className={cl.left}>
-                    <div className={cl.image}>
-                        <img src={currentItem.images[0]} />
-                    </div>
+                    <Link to={`/detail/${currentItem._id}`}>
+                        <div className={cl.image}>
+                            <img src={currentItem.images[0]} />
+                        </div>
+                    </Link>
                     <div className={cl.texts}>
                         <div className={cl.title}>
                             Игрушка{' '}
@@ -38,7 +41,9 @@ export const BasketItemCard = ({ id }) => {
                                 {currentItem.title[currentLanguage]}
                             </span>
                         </div>
-                        <div className={cl.size}>Размер: {id.size}</div>
+                        <div className={cl.size}>
+                            Размер: {currentItem.sizes[id.size]}
+                        </div>
                     </div>
                 </div>
                 <div className={cl.mid}>
@@ -49,9 +54,12 @@ export const BasketItemCard = ({ id }) => {
                 <div className={cl.price}>
                     <div className={cl.price__text}>
                         <span className={cl.bold}>
-                            {currentItem.price[0].toLocaleString(undefined, {
-                                maximumFractionDigits: 2,
-                            })}{' '}
+                            {currentItem.price[id.size].toLocaleString(
+                                undefined,
+                                {
+                                    maximumFractionDigits: 2,
+                                }
+                            )}{' '}
                             ₸
                         </span>
                     </div>

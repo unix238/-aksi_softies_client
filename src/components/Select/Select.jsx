@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cl from './Select.module.css';
 
-export const Select = ({ option }) => {
+export const Select = ({ option, onChange }) => {
     const [currentOption, setCurrentOption] = useState(option.options[0].title);
 
     const filters = {
@@ -31,7 +31,7 @@ export const Select = ({ option }) => {
         <select
             className={cl.select}
             value={currentOption}
-            onChange={handleChange}
+            onChange={onChange ? onChange : handleChange}
         >
             {option.options.map((opt) => (
                 <option

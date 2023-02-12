@@ -35,7 +35,7 @@ export const ItemCard = ({ item }) => {
                 <div
                     className={cl.icon}
                     onClick={() => {
-                        dispatch(addItemToBasket(item, -1, -1));
+                        dispatch(addItemToBasket(item, 1, 0));
                     }}
                 >
                     <Cart />

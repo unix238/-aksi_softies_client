@@ -51,12 +51,12 @@ export const HowToOrder = () => {
         <div className='wrapper'>
             <div className='page__center'>
                 <div className='vector'>
-                    {slides.map((i, _i) => (
+                    {slides.map((i, index) => (
                         <>
                             <div
-                                key={`${_i}vector`}
+                                key={`sada${index}vector`}
                                 className={
-                                    currentSlide === _i
+                                    currentSlide === index
                                         ? 'active__vector'
                                         : 'vector__item'
                                 }
