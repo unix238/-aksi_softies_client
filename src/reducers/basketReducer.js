@@ -7,7 +7,7 @@ const initialState = {
     basketItems:
         localStorage.getItem('basket') === null
             ? []
-            : localStorage.getItem('basket').split(','),
+            : JSON.parse(localStorage.getItem('basket')),
 };
 
 function reducer(state = initialState, action) {
@@ -26,11 +26,14 @@ function reducer(state = initialState, action) {
             };
 
         case REMOVE_ITEM_FROM_BASKET:
+            console.log(action.basketItem);
+            const newBasket = state.basketItems.filter(
+                (item) => item.item.item._id !== action.basketItem
+            );
+            localStorage.setItem('basket', JSON.stringify(newBasket));
             return {
                 ...state,
-                basketItems: state.basketItems.filter(
-                    (item) => item.item !== action.basketItem
-                ),
+                basketItems: newBasket,
             };
         default:
             return state;

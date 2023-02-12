@@ -3,6 +3,7 @@ import cl from './BasketItemCard.module.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchItems, getItemById } from '../../actions/itemsActions';
+import { removeItemFromBasket } from '../../actions/basketActions';
 
 export const BasketItemCard = ({ id }) => {
     const currentLanguage = useSelector(
@@ -14,6 +15,12 @@ export const BasketItemCard = ({ id }) => {
     useEffect(() => {
         getItemById(id.item._id, setCurrentItem, setIsLoading);
     }, []);
+
+    const dispatch = useDispatch();
+    const removeItemFromBasketHandler = () => {
+        dispatch(removeItemFromBasket(id.item._id));
+        console.log('pressed');
+    };
 
     return isLoading ? (
         <></>
@@ -48,7 +55,12 @@ export const BasketItemCard = ({ id }) => {
                             ₸
                         </span>
                     </div>
-                    <div className={cl.button}>Удалить</div>
+                    <div
+                        className={cl.button}
+                        onClick={removeItemFromBasketHandler}
+                    >
+                        Удалить
+                    </div>
                 </div>
             </div>
 
