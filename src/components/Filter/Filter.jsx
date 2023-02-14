@@ -6,35 +6,30 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchFilteredItems } from '../../actions/itemsActions';
 
 export const Filter = () => {
-    const currentLanguage = useSelector(
-        (state) => state.global.currentLanguage
-    );
+  const currentLanguage = useSelector((state) => state.global.currentLanguage);
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  let [filters, setFilters] = useState({});
 
-    const allFilters = {
-        sort: null,
-        size: null,
-        category: null,
-        price: null,
-        material: null,
-    };
+  const setFilter = (filter) => {
+    setFilters((filters) => ({ ...filters, ...filter }));
+  };
 
-    const setFilter = (filter) => {
-        allFilters[Object.keys(filter)[0]] = filter[Object.keys(filter)[0]];
-        dispatch(fetchFilteredItems(allFilters));
-    };
+  useEffect(() => {
+    console.log(filters);
+    dispatch(fetchFilteredItems(filters));
+  }, [filters]);
 
-    const allOptions = SortsAndFilters[currentLanguage];
-    const options = allOptions.map((option) => {
-        return { ...option, onClick: setFilter };
-    });
+  const allOptions = SortsAndFilters[currentLanguage];
+  const options = allOptions.map((option) => {
+    return { ...option, onClick: setFilter };
+  });
 
-    return (
-        <div className={cl.container}>
-            {options.map((option) => (
-                <Select key={`${option.title} in filter.jsx`} option={option} />
-            ))}
-        </div>
-    );
+  return (
+    <div className={cl.container}>
+      {options.map((option) => (
+        <Select key={`${option.title} in filter.jsx`} option={option} />
+      ))}
+    </div>
+  );
 };
