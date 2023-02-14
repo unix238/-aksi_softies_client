@@ -1,63 +1,34 @@
 import React, { useEffect } from 'react';
+import { AboutTexts } from '../../localizations/AboutTexts';
+import { useSelector } from 'react-redux';
 
 export const About = () => {
-    useEffect(() => {
-        document.title = 'Aksi_kus';
-    }, []);
-    return (
-        <div>
-            <div className='about__title'>Aksi_kus</div>
-            <div className='author__images'></div>
-            <div className='wrapper'>
-                <div className='about__text'>
-                    <div className='paragraph'>
-                        <span className='bold'>
-                            Всех приветствую на своей страничке по рукоделию!
-                        </span>
-                    </div>
-                    <div className='paragraph'>
-                        Меня зовут Ақсана (Ақ – белый, чистый. Сана – помыслы).
-                        Мне 20 лет и я являюсь студенткой технического
-                        университета.
-                    </div>
-                    <div className='paragraph'>
-                        Я занимаюсь вязанием крючком уже целых 9 лет. Помимо
-                        вязания в ряд моих хобби входит китайским язык и танцы.
-                        На самом деле, моя специальность совсем не связана с
-                        моей основной деятельностью, однако я все равно уделяю
-                        огромное вниманию учебе и создаю свой укромный уголок в
-                        мире вязания.{' '}
-                    </div>
-                    <div className='paragraph'>
-                        Мой путь в этой сфере. начался совершенно спонтанно.
-                        Одно из моих видео попало в рекоммендации в социальной
-                        сети “TikTok”. Ваши теплые отзывы зародили в моей голове
-                        небольшую идею, которая накрепко засела в подсознании. И
-                        сейчас я в полной мере решаюсь на её осуществление!
-                    </div>
-                    <div className='paragraph'>
-                        При помощи этой странички я бы хотела приоткрыть вам
-                        дверцу в мой уютный мирок рукоделия. Мне очень нравятся
-                        плюшевые игрушки, и мне бы хотелось создавать их и для
-                        других.
-                    </div>
-                    <div className='paragraph'>
-                        Данный сайт также является проектом для одной из
-                        дисциплин в моем университете. Также, мне бы хотелось
-                        выразить благодарность двум особенным людям за помощь в
-                        написании кода и отличное времяпрепровождение.
-                    </div>
-                    <div className='paragraph'>
-                        Личный инстаграм, где можно больше узнать про меня:
-                        Aksi_kus
-                    </div>
-                    <div className='paragraph'>
-                        Всех обняла!
-                        <br /> С любовью,
-                        <br /> Ақсана❤️
-                    </div>
-                </div>
-            </div>
+  const currentLanguage = useSelector((state) => state.global.currentLanguage);
+  useEffect(() => {
+    document.title = 'Aksi_kus';
+  }, []);
+  return (
+    <div>
+      <div className='about__title'>Aksi_kus</div>
+      <div className='author__images'></div>
+      <div className='wrapper'>
+        <div className='about__text'>
+          <div className='paragraph'>
+            <span className='bold'>{AboutTexts[currentLanguage].hello}</span>
+          </div>
+          <div className='paragraph'>{AboutTexts[currentLanguage].first}</div>
+          <div className='paragraph'>{AboutTexts[currentLanguage].second}</div>
+          <div className='paragraph'>{AboutTexts[currentLanguage].third}</div>
+          <div className='paragraph'>{AboutTexts[currentLanguage].fourth}</div>
+          <div className='paragraph'>{AboutTexts[currentLanguage].fifth}</div>
+          <div className='paragraph'>{AboutTexts[currentLanguage].sixth}</div>
+          <div className='paragraph'>
+            {AboutTexts[currentLanguage].seventh}
+            <br /> {AboutTexts[currentLanguage].eighth}
+            <br /> {AboutTexts[currentLanguage].ninth}
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
