@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 import { addItemToBasket } from '../../actions/basketActions';
 import { DetailTexts } from '../../localizations/DetailTexts';
 
+import config from '../../config/config';
+
 export const Detail = () => {
   const currentLanguage = useSelector((state) => state.global.currentLanguage);
   const [currentImage, setCurrentImage] = useState(0);
@@ -26,7 +28,7 @@ export const Detail = () => {
       document.title = currentItem?.title[currentLanguage];
       setOptions({
         options: currentItem?.sizes.map((size) => ({
-          text: size,
+          text: size + 'cm',
           value: size,
         })),
       });
@@ -80,7 +82,7 @@ export const Detail = () => {
                       key={`breadcrum${index}`}
                       onClick={() => setCurrentImage(index)}
                     >
-                      <img src={image} alt='' />
+                      <img src={config.url + image} alt='' />
                     </div>
                   );
                 })}
