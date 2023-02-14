@@ -40,7 +40,7 @@ export const Detail = () => {
   const setSize = (e) => {
     console.log(e.target.value);
     setCurrentSize(
-      currentItem.sizes.findIndex((size) => size === e.target.value)
+      currentItem.sizes.findIndex((size) => size == e.target.value)
     );
   };
 
@@ -122,7 +122,6 @@ export const Detail = () => {
               </div>
               <div className='description'>
                 {currentItem.description[currentLanguage]}
-                {/* {DetailTexts[currentLanguage].delivery} */}
               </div>
             </div>
             <div className='delivery'>
