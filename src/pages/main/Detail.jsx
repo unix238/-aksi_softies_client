@@ -89,7 +89,10 @@ export const Detail = () => {
               </div>
               <div className='main__image'>
                 <div className='current__image'>
-                  <img src={currentItem.images[currentImage]} alt='' />
+                  <img
+                    src={config.url + currentItem.images[currentImage]}
+                    alt=''
+                  />
                 </div>
               </div>
             </div>
