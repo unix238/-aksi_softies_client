@@ -3,7 +3,7 @@ export const SortsAndFilters = [
     {
       title: 'Cортировать по',
       options: [
-        { text: 'По пулярности', value: 'popularity' },
+        { text: 'По популярности', value: 'popularity' },
         { text: 'Убыванию цены', value: 'price-desc' },
         { text: 'Возрастанию цены', value: 'price-asc' },
         { text: 'Новизне', value: 'new' },
@@ -12,6 +12,7 @@ export const SortsAndFilters = [
     {
       title: 'Размер',
       options: [
+        { text: 'Все размеры', value: 'all' },
         { text: '5-10см', value: '5-10' },
         { text: '10-15см', value: '10-15' },
         { text: '15-20см', value: '15-20' },
@@ -22,6 +23,7 @@ export const SortsAndFilters = [
     {
       title: 'Цена',
       options: [
+        { text: 'Все цены', value: 'all' },
         { text: '0 - 5 000₸', value: '0-5000' },
         { text: '5 000 - 10 000₸', value: '5000-10000' },
         { text: '10 000 - 15 000₸', value: '10000-15000' },
@@ -32,6 +34,7 @@ export const SortsAndFilters = [
     {
       title: 'Пряжа',
       options: [
+        { text: 'Любой материал', value: 'all' },
         { text: 'Полиэстер', value: '63e92cca9dc24cb8dde6ca3b' },
         { text: 'Акрил', value: '63e92cdb9dc24cb8dde6ca3d' },
         { text: 'Хлопок', value: '63e92cfc9dc24cb8dde6ca3f' },
@@ -50,7 +53,7 @@ export const SortsAndFilters = [
     {
       title: 'Cортировать по',
       options: [
-        { text: 'По пулярности', value: 'popularity' },
+        { text: 'По популярности', value: 'popularity' },
         { text: 'Убыванию цены', value: 'price-desc' },
         { text: 'Возрастанию цены', value: 'price-asc' },
         { text: 'Новизне', value: 'new' },
@@ -59,6 +62,7 @@ export const SortsAndFilters = [
     {
       title: 'Размер',
       options: [
+        { text: 'Все размеры', value: 'all' },
         { text: '5-10см', value: '5-10' },
         { text: '10-15см', value: '10-15' },
         { text: '15-20см', value: '15-20' },
@@ -69,6 +73,7 @@ export const SortsAndFilters = [
     {
       title: 'Цена',
       options: [
+        { text: 'Все цены', value: 'all' },
         { text: '0 - 5 000₸', value: '0-5000' },
         { text: '5 000 - 10 000₸', value: '5000-10000' },
         { text: '10 000 - 15 000₸', value: '10000-15000' },
@@ -79,6 +84,7 @@ export const SortsAndFilters = [
     {
       title: 'Пряжа',
       options: [
+        { text: 'Любой материал', value: 'all' },
         { text: 'Полиэстер', value: '63e92cca9dc24cb8dde6ca3b' },
         { text: 'Акрил', value: '63e92cdb9dc24cb8dde6ca3d' },
         { text: 'Хлопок', value: '63e92cfc9dc24cb8dde6ca3f' },
@@ -97,7 +103,7 @@ export const SortsAndFilters = [
     {
       title: 'Cортировать по',
       options: [
-        { text: 'По пулярности', value: 'popularity' },
+        { text: 'По популярности', value: 'popularity' },
         { text: 'Убыванию цены', value: 'price-desc' },
         { text: 'Возрастанию цены', value: 'price-asc' },
         { text: 'Новизне', value: 'new' },
@@ -106,6 +112,7 @@ export const SortsAndFilters = [
     {
       title: 'Размер',
       options: [
+        { text: 'Все размеры', value: 'all' },
         { text: '5-10см', value: '5-10' },
         { text: '10-15см', value: '10-15' },
         { text: '15-20см', value: '15-20' },
@@ -116,6 +123,7 @@ export const SortsAndFilters = [
     {
       title: 'Цена',
       options: [
+        { text: 'Все цены', value: 'all' },
         { text: '0 - 5 000₸', value: '0-5000' },
         { text: '5 000 - 10 000₸', value: '5000-10000' },
         { text: '10 000 - 15 000₸', value: '10000-15000' },
@@ -126,6 +134,7 @@ export const SortsAndFilters = [
     {
       title: 'Пряжа',
       options: [
+        { text: 'Любой материал', value: 'all' },
         { text: 'Полиэстер', value: '63e92cca9dc24cb8dde6ca3b' },
         { text: 'Акрил', value: '63e92cdb9dc24cb8dde6ca3d' },
         { text: 'Хлопок', value: '63e92cfc9dc24cb8dde6ca3f' },

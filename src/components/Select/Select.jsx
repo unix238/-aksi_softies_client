@@ -6,8 +6,9 @@ export const Select = ({ option, onChange }) => {
 
   const filters = {
     sort: ['popularity', 'price-desc', 'price-asc', 'new'],
-    size: ['5-10', '10-15', '15-20', '20-25', '25-30'],
+    size: ['all', '5-10', '10-15', '15-20', '20-25', '25-30'],
     price: [
+      'all',
       '0-5000',
       '5000-10000',
       '10000-15000',
@@ -15,6 +16,7 @@ export const Select = ({ option, onChange }) => {
       '25000-30000',
     ],
     material: [
+      'all',
       '63e92cca9dc24cb8dde6ca3b',
       '63e92cdb9dc24cb8dde6ca3d',
       '63e92cfc9dc24cb8dde6ca3f',
