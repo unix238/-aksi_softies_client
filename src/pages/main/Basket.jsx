@@ -1,6 +1,9 @@
+/** @format */
+
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { BasketItemCard } from '../../components/BasketItemCard/BasketItemCard';
+import { Modal } from '../../components/Modal/Modal';
 import { BasketTexts } from '../../localizations/BasketTexts';
 
 export const Basket = () => {
@@ -12,6 +15,7 @@ export const Basket = () => {
   );
 
   const currentLanguage = useSelector((state) => state.global.currentLanguage);
+  const [isModalActive, setIsModalActive] = useState(false);
 
   useEffect(() => {
     document.title = BasketTexts[currentLanguage].title;
@@ -39,7 +43,16 @@ export const Basket = () => {
                 />
               ))}
               <div className='basket__total'>
-                <div className='btn'>{BasketTexts[currentLanguage].buy}</div>
+                <div
+                  className='btn btn__basket'
+                  onClick={(e) => {
+                    console.log(e);
+                    setIsModalActive(true);
+                    console.log('dsadsa');
+                  }}
+                >
+                  {BasketTexts[currentLanguage].buy}
+                </div>
                 <div className='total'>
                   {BasketTexts[currentLanguage].total}{' '}
                   {total.toLocaleString(undefined, {
@@ -49,6 +62,7 @@ export const Basket = () => {
                 </div>
               </div>
             </div>
+            {isModalActive && <Modal setIsModalActive={setIsModalActive} />}
           </>
         ) : (
           <div className='basket__empty'>

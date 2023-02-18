@@ -71,3 +71,20 @@
 .button {
     cursor: pointer;
 }
+
+
+@media (max-width: 400px) {
+    .item {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .image {
+        width: 100px;
+        height: 130px;
+    }
+
+    .mid {
+        display: none;
+    }
+}

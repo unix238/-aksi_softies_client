@@ -88,3 +88,26 @@
     left: 50%;
     color: red;
 }
+
+@media (max-width: 1240px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .container {
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .blockItems {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .text {
+        justify-content: center;
+    }
+
+}

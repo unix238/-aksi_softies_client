@@ -514,3 +514,122 @@
     font-weight: 600;
     font-size: 18px;
 }
+
+
+@media (max-width: 1240px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .new__items {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+
+    .items__container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .slide__info {
+        width: 300px;
+        align-items: center;
+        height: auto;
+    }
+
+    .vector {
+        display: none;
+    }
+}
+
+@media (max-width: 1240px) {
+    .slide__info {
+        width: 200px;
+        align-items: center;
+        height: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .header_title {
+        font-size: 36px;
+        line-height: 34px;
+        margin-top: 15px;
+    }
+
+    .top__container {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .image__galery {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow-x: scroll !important;
+        overflow: hidden;
+        height: 100px;
+        /* justify-content: flex-end; */
+        margin-top: 50px;
+    }
+
+    .breadcrum__image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .breadcrum__image img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .mid__container {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .description__container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .breadcrum__image__active {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .current__image {
+        width: 90%;
+        height: 90%;
+    }
+
+    .delivery {
+        width: 100%;
+    }
+
+    .basket__total {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .btn__basket {
+        width: 40%;
+    }
+
+    .top__texts {
+        width: 100%;
+    }
+}
