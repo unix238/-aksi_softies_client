@@ -1,3 +1,5 @@
+/** @format */
+
 import axios from 'axios';
 import config from '../config/config';
 
@@ -21,7 +23,7 @@ export const removeItemFromBasket = (item) => {
 
 export const sendOrder = async (order) => {
   try {
-    const response = await axios.post(`${config.url}/checkout`, order);
+    const response = await axios.post(`${config.url}item/checkout`, order);
     console.log(response);
   } catch (error) {
     console.log(error);
