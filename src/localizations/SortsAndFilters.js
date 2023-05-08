@@ -1,18 +1,18 @@
 export const SortsAndFilters = [
   [
     {
-      title: 'Cортировать по',
+      title: 'Бойынша сұрыптау',
       options: [
-        { text: 'По популярности', value: 'popularity' },
-        { text: 'Убыванию цены', value: 'price-desc' },
-        { text: 'Возрастанию цены', value: 'price-asc' },
-        { text: 'Новизне', value: 'new' },
+        { text: 'Танымалдылығы бойынша', value: 'popularity' },
+        { text: 'Бағаның төмендеуі', value: 'price-desc' },
+        { text: 'Бағаның өсуі', value: 'price-asc' },
+        { text: 'Жаңалық', value: 'new' },
       ],
     },
     {
-      title: 'Размер',
+      title: 'Өлшем',
       options: [
-        { text: 'Все размеры', value: 'all' },
+        { text: 'Барлық өлшемдері', value: 'all' },
         { text: '5-10см', value: '5-10' },
         { text: '10-15см', value: '10-15' },
         { text: '15-20см', value: '15-20' },
@@ -21,9 +21,9 @@ export const SortsAndFilters = [
       ],
     },
     {
-      title: 'Цена',
+      title: 'Баға',
       options: [
-        { text: 'Все цены', value: 'all' },
+        { text: 'Барлық бағалар', value: 'all' },
         { text: '0 - 5 000₸', value: '0-5000' },
         { text: '5 000 - 10 000₸', value: '5000-10000' },
         { text: '10 000 - 15 000₸', value: '10000-15000' },
@@ -32,20 +32,20 @@ export const SortsAndFilters = [
       ],
     },
     {
-      title: 'Пряжа',
+      title: 'Тоқыма жібі',
       options: [
-        { text: 'Любой материал', value: 'all' },
+        { text: 'Кез келген', value: 'all' },
         { text: 'Полиэстер', value: '63e92cca9dc24cb8dde6ca3b' },
         { text: 'Акрил', value: '63e92cdb9dc24cb8dde6ca3d' },
-        { text: 'Хлопок', value: '63e92cfc9dc24cb8dde6ca3f' },
+        { text: 'Мақта', value: '63e92cfc9dc24cb8dde6ca3f' },
       ],
     },
     {
-      title: 'Категория',
+      title: 'Санат',
       options: [
-        { text: 'Все', value: 'all' },
-        { text: 'Игрушки', value: 'toys' },
-        { text: 'Схемы', value: 'schemes' },
+        { text: 'Барлығы', value: 'all' },
+        { text: 'Ойыншықтар', value: 'toys' },
+        { text: 'Схемалар', value: 'schemes' },
       ],
     },
   ],
@@ -101,18 +101,18 @@ export const SortsAndFilters = [
   ],
   [
     {
-      title: 'Cортировать по',
+      title: 'Sort by',
       options: [
-        { text: 'По популярности', value: 'popularity' },
-        { text: 'Убыванию цены', value: 'price-desc' },
-        { text: 'Возрастанию цены', value: 'price-asc' },
-        { text: 'Новизне', value: 'new' },
+        { text: 'Popularity', value: 'popularity' },
+        { text: 'Price descending', value: 'price-desc' },
+        { text: 'Price Asc', value: 'price-asc' },
+        { text: 'New', value: 'new' },
       ],
     },
     {
-      title: 'Размер',
+      title: 'Size',
       options: [
-        { text: 'Все размеры', value: 'all' },
+        { text: 'All sizes', value: 'all' },
         { text: '5-10см', value: '5-10' },
         { text: '10-15см', value: '10-15' },
         { text: '15-20см', value: '15-20' },
@@ -121,9 +121,9 @@ export const SortsAndFilters = [
       ],
     },
     {
-      title: 'Цена',
+      title: 'Price',
       options: [
-        { text: 'Все цены', value: 'all' },
+        { text: 'All prices', value: 'all' },
         { text: '0 - 5 000₸', value: '0-5000' },
         { text: '5 000 - 10 000₸', value: '5000-10000' },
         { text: '10 000 - 15 000₸', value: '10000-15000' },
@@ -132,20 +132,20 @@ export const SortsAndFilters = [
       ],
     },
     {
-      title: 'Пряжа',
+      title: 'Yarn',
       options: [
-        { text: 'Любой материал', value: 'all' },
-        { text: 'Полиэстер', value: '63e92cca9dc24cb8dde6ca3b' },
-        { text: 'Акрил', value: '63e92cdb9dc24cb8dde6ca3d' },
-        { text: 'Хлопок', value: '63e92cfc9dc24cb8dde6ca3f' },
+        { text: 'Any material', value: 'all' },
+        { text: 'Polyester', value: '63e92cca9dc24cb8dde6ca3b' },
+        { text: 'Acrylic', value: '63e92cdb9dc24cb8dde6ca3d' },
+        { text: 'Cotton', value: '63e92cfc9dc24cb8dde6ca3f' },
       ],
     },
     {
-      title: 'Категория',
+      title: 'Category',
       options: [
-        { text: 'Все', value: 'all' },
-        { text: 'Игрушки', value: 'toys' },
-        { text: 'Схемы', value: 'schemes' },
+        { text: 'All', value: 'all' },
+        { text: 'Toys', value: 'toys' },
+        { text: 'Schemas', value: 'schemes' },
       ],
     },
   ],

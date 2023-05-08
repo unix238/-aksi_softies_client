@@ -2,27 +2,27 @@ export const HowToOrderTexts = [
   {
     slides: [
       {
-        title: 'Шаг 1',
+        title: '1 қадам',
         description:
-          'Перейти в каталог и выбрать интересующий вас товар. Выбрать размер одежды или постера/модель телефона/вид коллекции',
+          'Каталогқа өтіп, сізді қызықтыратын өнімді таңдаңыз. Киім немесе плакат өлшемін/телефон үлгісін/коллекция көрінісін таңдаңыз',
       },
       {
-        title: 'Шаг 2',
-        description: 'Нажать кнопку «Добавить в корзину» ',
+        title: '2 қадам',
+        description: '«Себетке қосу» пернесін басу',
       },
       {
-        title: 'Шаг 3',
+        title: '3 қадам',
         description:
-          'Заполнить все контактные данные во всплывающем окне. Если вы хотите связаться с менеджером, то поставьте галочку в поле «хочу подтвердить заказ по телефону» ',
+          'Барлық байланыс деректерін қалқымалы терезеде толтырыңыз. Егер сіз менеджермен байланысқыңыз келсе, "телефон арқылы тапсырысты растағым келеді" өрісіне құсбелгі қойыңыз',
       },
       {
-        title: 'Шаг 4',
-        description: 'Нажать на кнопку «оформить заказ»',
+        title: '4 қадам',
+        description: '«Тапсырысты растау» пернесін басыңыз',
       },
       {
-        title: 'Шаг 5',
+        title: '5 қадам',
         description:
-          'Перейти на страницу оплаты, ввести контактные данные и совершить оплату ',
+        'Төлем жасау бетіне өтіп, контакті мәліметтеріңізді енгізу және төлем жасау',
       },
     ],
   },
@@ -56,27 +56,27 @@ export const HowToOrderTexts = [
   {
     slides: [
       {
-        title: 'Шаг 1',
+        title: 'Step 1',
         description:
-          'Перейти в каталог и выбрать интересующий вас товар. Выбрать размер одежды или постера/модель телефона/вид коллекции',
+          'Go to the catalog and select the product you are interested in. Select clothing or poster size/phone model/collection type',
       },
       {
-        title: 'Шаг 2',
-        description: 'Нажать кнопку «Добавить в корзину» ',
+        title: 'Step 2',
+        description: 'Press the "Add to Cart" button',
       },
       {
-        title: 'Шаг 3',
+        title: 'Step 3',
         description:
-          'Заполнить все контактные данные во всплывающем окне. Если вы хотите связаться с менеджером, то поставьте галочку в поле «хочу подтвердить заказ по телефону» ',
+          'Fill in all contact details in the pop-up window. If you want to contact the manager, then check the box "I want to confirm the order by phone" ',
       },
       {
-        title: 'Шаг 4',
-        description: 'Нажать на кнопку «оформить заказ»',
+        title: 'Step 4',
+        description: 'Click on the "checkout" button',
       },
       {
-        title: 'Шаг 5',
+        title: 'Step 5',
         description:
-          'Перейти на страницу оплаты, ввести контактные данные и совершить оплату ',
+          'Go to the payment page, enter contact details and complete the payment',
       },
     ],
   },
