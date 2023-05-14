@@ -177,21 +177,21 @@
 }
 
 .header {
-    height: 800px;
-    margin-top: 25px;
+    height: 550px;
+    margin-top: 15px;
     width: 100%;
-    background: url('../assets/images/bg.jfif') no-repeat;
+    background: url('../assets/images/bg.png') no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .header_title {
-    color: rgba(255, 174, 72, 0.53);
-    font-weight: 700;
+    color: rgb(67, 38, 16);
+    font-weight: 800;
     font-size: 60.48px;
-    line-height: 74px;
-    text-align: center;
-    padding-top: 89px;
+    line-height: 14px;
+    text-align: left;
+    padding-top: 450px;
 }
 
 .new__title {

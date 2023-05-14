@@ -12,7 +12,7 @@ export const Index = () => {
   return (
     <>
       <div className='header'>
-        <div className='header_title'>BORN IN(FOR) KAZAKHSTAN</div>
+        <div className='header_title'>HOMYAKA LAND</div>
       </div>
       <div className='wrapper'>
         <div className='new__title'>{IndexTexts[currentLanguage].title}</div>
