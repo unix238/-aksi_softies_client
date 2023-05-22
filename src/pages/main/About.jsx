@@ -10,7 +10,7 @@ export const About = () => {
   return (
     <div>
       <div className='about__title'>Aksi_kus</div>
-      <div className='author__images'></div>
+      {/* <div className='author__images'></div> */}
       <div className='wrapper'>
         <div className='about__text'>
           <div className='paragraph'>

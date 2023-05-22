@@ -101,7 +101,11 @@ export const Detail = () => {
                 {currentItem.title[currentLanguage]}
               </div>
               <div className='composition'>
-                {currentItem.context[currentLanguage]}
+                {currentItem.context[currentLanguage]
+                  .split('\\')
+                  .map((item, index) => {
+                    return <p key={`desc${index}`}>{item}</p>;
+                  })}
               </div>
               <Select option={options} onChange={setSize} />
               <div className='price'>
@@ -121,7 +125,11 @@ export const Detail = () => {
                 {DetailTexts[currentLanguage].desc}
               </div>
               <div className='description'>
-                {currentItem.description[currentLanguage]}
+                {currentItem.description[currentLanguage]
+                  .split('\\')
+                  .map((item, index) => {
+                    return <p key={`desc${index}`}>{item}</p>;
+                  })}
               </div>
             </div>
             <div className='delivery'>
@@ -129,7 +137,11 @@ export const Detail = () => {
                 {DetailTexts[currentLanguage].deliveryTitle}
               </div>
               <div className='description'>
-                {DetailTexts[currentLanguage].delivery}
+                {DetailTexts[currentLanguage].delivery
+                  .split('\\')
+                  .map((item, index) => {
+                    return <p key={`desc${index}`}>{item}</p>;
+                  })}
               </div>
             </div>
           </div>

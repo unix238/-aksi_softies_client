@@ -14,45 +14,45 @@ import { Contact } from '../pages/main/Contact';
 import { About } from '../pages/main/About';
 
 const placeholder = () => {
-    return <>placeholder</>;
+  return <>placeholder</>;
 };
 
 const Routes = createBrowserRouter([
-    {
-        path: '/',
-        element: <PageWrapper Page={Index} />,
-    },
-    {
-        path: '/catalog',
-        element: <PageWrapper Page={Items} />,
-    },
-    {
-        path: '/how-to-order',
-        element: <PageWrapper Page={HowToOrder} />,
-    },
-    {
-        path: '/about',
-        element: <PageWrapper Page={About} />,
-    },
-    {
-        path: '/contacts',
-        element: <PageWrapper Page={Contact} />,
-    },
-    {
-        path: '/cart',
-        element: <PageWrapper Page={Basket} />,
-    },
-    {
-        path: '/detail/:id',
-        element: <PageWrapper Page={Detail} />,
-    },
-    {
-        path: '*',
-        // element: <Navigate to='/' />,
-        element: <PageWrapper Page={NotFound} />,
-    },
+  {
+    path: '/',
+    element: <PageWrapper Page={Index} />,
+  },
+  {
+    path: '/catalog',
+    element: <PageWrapper Page={Items} />,
+  },
+  {
+    path: '/how-to-order',
+    element: <PageWrapper Page={HowToOrder} />,
+  },
+  {
+    path: '/about',
+    element: <PageWrapper Page={About} />,
+  },
+  {
+    path: '/contacts',
+    element: <PageWrapper Page={Contact} />,
+  },
+  {
+    path: '/cart',
+    element: <PageWrapper Page={Basket} />,
+  },
+  {
+    path: '/detail/:id',
+    element: <PageWrapper Page={Detail} />,
+  },
+  {
+    path: '*',
+    // element: <Navigate to='/' />,
+    element: <PageWrapper Page={NotFound} />,
+  },
 ]);
 
 export const AppRouter = () => {
-    return <RouterProvider router={Routes} />;
+  return <RouterProvider router={Routes} />;
 };
